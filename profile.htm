@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -15,51 +16,35 @@
             <a href="contacts.htm">Контакты</a>
             <a href="about.htm">О нас</a>
             <a href="address.htm">Адрес</a>
+            <a href="profile.htm">Профиль</a>
 
         </nav>
     </header>
     <main>
-        <section class="registration">
-            <h2 class="registration-title">Запись на услугу</h2>
-            <form action="#" method="post">
+        <section class="profile">
+            <h2 class="profile-title">Профиль</h2>
+            <form action="process_profile.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="name">Имя:</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="avatar">Фото:</label>
+                    <input type="file" id="avatar" name="avatar" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="fio">ФИО:</label>
+                    <input type="text" id="fio" name="fio" required>
                 </div>
                 <div class="form-group">
                     <label for="phone">Телефон:</label>
                     <input type="tel" id="phone" name="phone" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Электронная почта:</label>
+                    <label for="email">Почта:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="date">Дата:</label>
-                    <input type="date" id="date" name="date" required>
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" required>
                 </div>
-                <div class="form-group">
-                    <label for="time">Время:</label>
-                    <input type="time" id="time" name="time" required>
-                </div>
-                <div class="form-group">
-                    <label for="master">Мастер:</label>
-                    <select id="master" name="master">
-                        <option value="master1">Мастер Виктория</option>
-                        <option value="master2">Мастер Екатерина</option>
-                        <option value="master3">Мастер Ольга</option>
-                        <option value="master4">Мастер Светлана</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="service">Услуга:</label>
-                    <select id="service" name="service">
-                        <option value="manicure">Маникюр</option>
-                        <option value="pedicure">Педикюр</option>
-                        <option value="nail_art">Наращивание ногтей</option>
-                    </select>
-                </div>
-                <input type="submit" value="Записаться">
+                <input type="submit" value="Сохранить профиль">
             </form>
         </section>
     </main>
